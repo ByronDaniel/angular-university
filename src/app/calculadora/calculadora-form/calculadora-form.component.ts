@@ -16,6 +16,7 @@ export class CalculadoraFormComponent implements OnInit {
   @Output() outRes = new EventEmitter<number>();
   @Output() outMult = new EventEmitter<number>();
   @Output() outDiv = new EventEmitter<number>();
+  @Output() outMostrarResultado = new EventEmitter<boolean>();
 
 
   constructor() { }
@@ -23,6 +24,11 @@ export class CalculadoraFormComponent implements OnInit {
   ngOnInit(): void {
   }
   calcular(){
+    if(this.numero1 != 0){
+      this.outMostrarResultado.emit(true);
+    }else{
+      this.outMostrarResultado.emit(false);
+    }
     this.suma = this.numero1 + this.numero2;
     this.outSum.emit(this.suma);
     this.resta = this.numero1 - this.numero2;

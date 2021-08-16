@@ -10,6 +10,7 @@ export class CalculadoraComponent implements OnInit {
   div: number = 0;
   res: number = 0;
   mult:number = 0;
+  mostrarResultado: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

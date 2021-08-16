@@ -10,6 +10,7 @@ export class ResultadoComponent implements OnInit {
   @Input() inRes:number = 0;
   @Input() inMult:number = 0;
   @Input() inDiv: number = 0;
+  @Input() inMostrarResultado : boolean = false;
   constructor() { }
 
   ngOnInit(): void {
