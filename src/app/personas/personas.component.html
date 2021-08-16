@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="bg-primary text-light py-3 fw-light">Listado de personas</h1>
+      <button
+        class="btn btn-primary"
+        [disabled]="deshabilitar"
+        (click)="agregarPersona()"
+      >
+        Agregar Persona
+      </button>
+      <p>{{ mensaje }}</p>
+      <app-persona></app-persona>
+      <app-persona></app-persona>
+      <label>Titulo persona</label>
+      <input
+        type="text"
+        class="form-control"
+        (input)="modificarTitulo($event)"
+      />
+      {{ titulo }}
+
+      <input type="text" [(ngModel)]="texto" class="form-control" />
+      {{ texto }}
+    </div>
+  </div>
+</div>
